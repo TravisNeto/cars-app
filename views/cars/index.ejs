@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Showroom</title>
+  </head>
+  <body>
+    <%- include('../partials/_navbar.ejs') %>
+    <h1>Welcome to my Showroom!</h1>
+
+    <% foundShowroom.forEach((item) => { %>
+      <li>
+      <%= item.car %>
+      <a href="/users/<%= user._id %>/cars/<%= item._id %>/edit">Edit Car</a>
+      <form action="/users/<%= user._id %>/cars/<%= item._id %>?_method=DELETE" method="POST">
+      <button type="submit">Delete</button>
+    </form>
+      </li>
+    <% }) %>
+    <a href="/users/<%= user._id %>/cars/new ">Add New Car</a>
+  </body>
+</html>

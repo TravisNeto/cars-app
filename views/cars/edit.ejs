@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Document</title>
+</head>
+<body>
+    <%- include('../partials/_navbar.ejs') %>
+  <h1>Edit <%= user._id %></h1>
+  <form action="/users/<%=user._id%>/cars/<%= item._id%>?_method=PUT" method="POST">
+    <label for="text">Edit Car Showroom:</label>
+    <input type="text" name="car" id="text" value="<%= item.car %>" />
+    <button type="submit">Edit Car</button>
+  </form>
+  <a href="/users/<%=user._id%>/cars/<%= item._id%>/edit">Back to Cars</a>
+</body>
+</html>
