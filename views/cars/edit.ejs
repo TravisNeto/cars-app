@@ -4,6 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Document</title>
+  <link rel="stylesheet" href="/css/style.css">
 </head>
 <body>
     <%- include('../partials/_navbar.ejs') %>
@@ -13,6 +14,6 @@
     <input type="text" name="car" id="text" value="<%= item.car %>" />
     <button type="submit">Edit Car</button>
   </form>
-  <a href="/users/<%=user._id%>/cars/<%= item._id%>/edit">Back to Cars</a>
+  <a href="/users/<%=user._id%>/cars">Back to Cars</a>
 </body>
 </html>

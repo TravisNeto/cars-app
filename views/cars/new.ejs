@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Add New Car</title>
-    <link rel="stylesheet" href="/assets/css/styles.css">
+    <link rel="stylesheet" href="/css/style.css">
 </head>
 <body>
     <%- include('../partials/_navbar.ejs') %>
@@ -12,8 +12,8 @@
     <form action="/users/<%= user._id %>/cars" method="POST">
         <label for="car">Car Text:</label>
         <input type="text" id="car" name="car" required>
-        <label for="isInShowroom">Is this car in the Showroom?:</label>
-        <input type="checkbox" name="isInShowroom" id="isInShowroom"/>
+        <label for="isInShowroom">Is this car washed?:</label>
+        <input type="checkbox" name="isItWashed" id="isItWashed"/>
         <button type="submit">Add Car</button>
     </form>
     <a href="/cars/">Back to Showroom</a>
