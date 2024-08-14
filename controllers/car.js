@@ -8,7 +8,7 @@ router.get('/', async (req, res) => {
   const userId = req.session.user._id;
   const user = await User.findById(userId);
   res.render('cars/index.ejs', {
-    foundPantry: user.showroom
+    foundShowroom: user.showroom
   })
 });
 
@@ -38,7 +38,7 @@ router.get('/showroom', async (req, res) => {
       return res.status(404).send('User not found')
     }
     res.locals.foundShowroom = user.showroom;
-    res.render('/views/pantry/index.ejs'), {
+    res.render('/views/showroom/index.ejs'), {
       foundShowroom: user.showroom
   }
 } catch (error) {
