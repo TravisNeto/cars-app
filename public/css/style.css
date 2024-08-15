@@ -1,15 +1,37 @@
 body {
     background-color: navy;
     color: white
+    
+}
+
+nav {
+    justify-content: center;
+    text-align: center;
 }
 
 a {
+
     justify-content: center;
-    text-indent: 200px;
+    text-align: center;
     color: white
     
 }
 
 h1 {
     text-align: center;
+}
+
+button {
+    background-color: black;
+    color: white
+}
+
+#logocontainer {
+    display: flex;
+    justify-content: center;
+}
+
+#logobox {
+    display: flex;
+    justify-content: center;
 }
