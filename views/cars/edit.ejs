@@ -8,7 +8,7 @@
 </head>
 <body>
     <%- include('../partials/_navbar.ejs') %>
-  <h1>Edit <%= user._id %></h1>
+  <h1>Edit <%= item.car %></h1>
   <form action="/users/<%=user._id%>/cars/<%= item._id%>?_method=PUT" method="POST">
     <label for="text">Edit Car Showroom:</label>
     <input type="text" name="car" id="text" value="<%= item.car %>" />
