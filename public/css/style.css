@@ -6,6 +6,7 @@ body {
 
 nav {
     justify-content: center;
+    word-spacing: 2.5px;
     text-align: center;
 }
 
@@ -14,8 +15,8 @@ a {
     justify-content: center;
     text-align: center;
     color: white
-    
 }
+
 
 h1 {
     text-align: center;
@@ -34,4 +35,18 @@ button {
 #logobox {
     display: flex;
     justify-content: center;
+    margin-top: 30px;
+}
+
+#carlist {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.car {
+    display: flex;
+    justify-content: space-between;
+    width: 10%;
+    margin-bottom: 15px
 }

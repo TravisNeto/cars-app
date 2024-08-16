@@ -9,17 +9,21 @@
   <body>
     <%- include('../partials/_navbar.ejs') %>
     <h1>Welcome to my Showroom!</h1>
-
-    <% foundShowroom.forEach((item) => { %>
-      <li>
-      <%= item.car %>
-      <a href="/users/<%= user._id %>/cars/<%= item._id %>/edit">Edit Car</a>
-      <form action="/users/<%= user._id %>/cars/<%= item._id %>?_method=DELETE" method="POST">
-      <button type="submit">Delete</button>
-    </form>
-      </li>
-    <% }) %>
+    <div id="carlist"
+    <ul>
+      <% foundShowroom.forEach((item) => { %>
+        <li class="car">
+        <%= item.car %>
+        <a href="/users/<%= user._id %>/cars/<%= item._id %>/edit">Edit Car</a>
+        <form style="display: inline" action="/users/<%= user._id %>/cars/<%= item._id %>?_method=DELETE" method="POST">
+        <button type="submit">Delete</button>
+      </form>
+        </li>
+      <% }) %>
+    </ul>
     <a href="/users/<%= user._id %>/cars/new ">Add New Car</a>
+ 
+    </div>
     <div id="logobox">
       <img src="/img/ShowroomLogo.jpg" alt="Showroom Logo" id="logo2"/>
     </div>

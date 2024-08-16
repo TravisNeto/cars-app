@@ -44,6 +44,4 @@ app.use(isSignedIn);
 app.use('/users/:userId/cars',carsController);
 
 
-app.listen(port, () => {
-  console.log(`The express app is ready on port ${port}!`);
-});
+app.listen(port)
